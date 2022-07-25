@@ -21,4 +21,13 @@ public class BookmarkService {
         Page<BookmarkDTO> bookmarkPage = repository.findBy(pageable);
         return new BookmarksDTO(bookmarkPage);
     }
+
+    @Transactional(readOnly = true)
+    public BookmarksDTO searchBookmarks(String query, Integer page) {
+        int pageNo = page < 1 ? 0 : page -1 ;
+        Pageable pageable = PageRequest.of(pageNo, 10, Sort.Direction.DESC, "createdAt");
+        Page<BookmarkDTO> bookmarkPage = repository.searchBookmarks(query, pageable);
+        //Page<BookmarkVM> bookmarkVMPage = repository.findByTitleContainsIgnoreCase(query, pageable);
+        return new BookmarksDTO(bookmarkPage);
+    }
 }

@@ -27,7 +27,7 @@ public class BookmarkService {
         int pageNo = page < 1 ? 0 : page -1 ;
         Pageable pageable = PageRequest.of(pageNo, 10, Sort.Direction.DESC, "createdAt");
         //Page<BookmarkDTO> bookmarkPage = repository.searchBookmarks(query, pageable);
-        Page<BookmarkVM> bookmarkPage = repository.findByTitleContainsIgnoreCase(query, pageable);
+        Page<BookmarkDTO> bookmarkPage = repository.findByTitleContainsIgnoreCase(query, pageable);
         return new BookmarksDTO(bookmarkPage);
     }
 }

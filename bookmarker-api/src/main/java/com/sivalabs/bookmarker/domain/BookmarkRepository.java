@@ -7,7 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface BookmarkRepository extends JpaRepository<Bookmark, Long> {
 
-    @Query("select new com.sivalabs.bookmarker.domain.BookmarkDTO(b.id, b.title, b.url, b.createdAt) from Bookmark b")
+    @Query("""
+    select new com.sivalabs.bookmarker.domain.BookmarkDTO(b.id, b.title, b.url, b.createdAt) from Bookmark b
+    """)
     Page<BookmarkDTO> findBy(Pageable pageable);
 
     @Query("""
@@ -16,9 +18,6 @@ public interface BookmarkRepository extends JpaRepository<Bookmark, Long> {
     """)
     Page<BookmarkDTO> searchBookmarks(String query, Pageable pageable);
 
-
     Page<BookmarkVM> findByTitleContainsIgnoreCase(String query, Pageable pageable);
-
-    Page<BookmarkVM> findByTitleLikeIgnoreCase(String query, Pageable pageable);
 
 }

@@ -17,6 +17,7 @@
 		<java.version>17</java.version>
 		<testcontainers.version>1.17.2</testcontainers.version>
 		<jib-maven-plugin.version>3.2.1</jib-maven-plugin.version>
+		<problem-spring-web.version>0.27.0</problem-spring-web.version>
 		<dockerUserName>sivaprasadreddy</dockerUserName>
 		<dockerImageName>${dockerUserName}/${project.artifactId}</dockerImageName>
 	</properties>
@@ -41,7 +42,11 @@
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.zalando</groupId>
+			<artifactId>problem-spring-web-starter</artifactId>
+			<version>${problem-spring-web.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

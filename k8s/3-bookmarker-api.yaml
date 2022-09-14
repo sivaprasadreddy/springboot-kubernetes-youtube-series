@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookmarker-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bookmarker-api-pod
+  template:
+    metadata:
+      labels:
+        app: bookmarker-api-pod
+    spec:
+      containers:
+        - name: bookmarker
+          image: sivaprasadreddy/bookmarker-api
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: k8s
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: postgres_host
+                  name: bookmarker-config
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: postgres_port
+                  name: bookmarker-config
+            - name: DB_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  key: postgres_dbname
+                  name: bookmarker-config
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  key: postgres_username
+                  name: bookmarker-secrets
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: postgres_password
+                  name: bookmarker-secrets

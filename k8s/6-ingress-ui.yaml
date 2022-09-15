@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bookmarker-ui-ingress
+spec:
+  rules:
+    - http:
+          paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: bookmarker-ui-svc
+                port:
+                  number: 3000
+

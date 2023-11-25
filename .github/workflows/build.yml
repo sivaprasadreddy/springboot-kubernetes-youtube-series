@@ -3,6 +3,11 @@ name: Build
 on:
   push:
     branches: [ "**" ]
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   build-bookmarker-api:
@@ -41,10 +46,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js 16
+      - name: Setup Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: 'yarn'
           cache-dependency-path: bookmarker-ui-nextjs/yarn.lock
       - name: Install dependencies

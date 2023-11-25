@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: bookmarker-ui
-          image: sivaprasadreddy/bookmarker-ui-nextjs
+          image: dockertmt/bookmarker-ui-nextjs
           ports:
             - containerPort: 3000
           env:

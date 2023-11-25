@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17.0.8_7-jre-focal
+FROM eclipse-temurin:17.0.9_9-jre-focal
 
 ADD target/*.jar app.jar
 RUN sh -c 'touch /app.jar'

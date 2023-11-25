@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "bookmarker-api/**"
-    branches: [ "**" ]
+    branches: [ "main" ]
   pull_request:
     paths:
       - "bookmarker-api/**"

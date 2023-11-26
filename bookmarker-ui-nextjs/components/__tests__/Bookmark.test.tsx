@@ -1,6 +1,7 @@
 // __tests__/Bookmark.test.tsx
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom'
 
 import BookmarkComponent from '../Bookmark';  
 import { Bookmark } from '../../services/models';

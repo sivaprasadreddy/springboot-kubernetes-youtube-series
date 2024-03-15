@@ -1,4 +1,4 @@
-repo_name: rajadilipkolli/springboot-kubernetes-youtube-series
+repo_name: sivaprasadreddy/springboot-kubernetes-youtube-series
 report_id: 2dee80b7917c39f66a079725253e6420
 version: 0.1
 repo_type: Public
@@ -16,7 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series
   detection_source: Repo Metadata
 - name: Java
   description: A concurrent, class-based, object-oriented, language specifically designed
@@ -27,7 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -38,7 +38,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series
   detection_source: Repo Metadata
 - name: SQL
   description: It is a domain-specific language used in programming
@@ -48,7 +48,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/src/main/resources/db/migration/h2/V1__create_bookmarks_table.sql
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/src/main/resources/db/migration/h2/V1__create_bookmarks_table.sql
   detection_source: bookmarker-api/src/main/resources/db/migration/h2/V1__create_bookmarks_table.sql
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-07-08 00:41:11.000000000 Z
@@ -61,7 +61,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series
   detection_source: Repo Metadata
 - name: Bootstrap
   description: Simple and flexible HTML, CSS, and JS for popular UI components and
@@ -74,7 +74,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Front-End Frameworks
   image_url: https://img.stackshare.io/service/1101/C9QJ7V3X.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-08-21 23:29:38.000000000 Z
@@ -87,7 +87,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/5936/nextjs.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-08-21 23:29:38.000000000 Z
@@ -100,7 +100,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/Dockerfile
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/Dockerfile
   detection_source: bookmarker-ui-nextjs/Dockerfile
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-08-30 00:20:25.000000000 Z
@@ -114,7 +114,7 @@ tools:
   category: Libraries
   sub_category: Javascript UI Libraries
   image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-02-13 04:20:33.000000000 Z
@@ -128,7 +128,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/2006/spring-framework-project-logo.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -140,7 +140,7 @@ tools:
   category: Data Stores
   sub_category: Databases
   image_url: https://img.stackshare.io/service/3105/h2-logo_square_400x400.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-07-08 00:41:11.000000000 Z
@@ -152,7 +152,7 @@ tools:
   category: Data Stores
   sub_category: Databases
   image_url: https://img.stackshare.io/service/1028/ASOhU5xJ.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-07-08 00:41:11.000000000 Z
@@ -165,7 +165,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Virtual Machine Platforms & Containers
   image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series
   detection_source: Repo Metadata
 - name: ESLint
   description: The fully pluggable JavaScript code quality tool
@@ -176,7 +176,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/package.json
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/package.json
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-08-21 23:29:38.000000000 Z
@@ -188,7 +188,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series
   detection_source: Repo Metadata
 - name: GitHub Actions
   description: Automate your workflow from idea to production
@@ -198,7 +198,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/.github/workflows/build-api.yml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/.github/workflows/build-api.yml
   detection_source: ".github/workflows/build-api.yml"
   last_updated_by: renovate[bot]
   last_updated_on: 2023-12-11 15:54:30.000000000 Z
@@ -212,7 +212,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Javascript Testing Framework
   image_url: https://img.stackshare.io/service/830/jest.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-08-21 23:29:38.000000000 Z
@@ -224,7 +224,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/yarn.lock
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-08-21 23:29:38.000000000 Z
@@ -236,7 +236,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/package.json
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/package.json
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-08-21 23:29:38.000000000 Z
@@ -249,7 +249,7 @@ tools:
   category: Application Hosting
   sub_category: Platform as a Service
   image_url: https://img.stackshare.io/service/3276/xWt1RFo6_400x400.jpg
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/src/main/resources/application.properties
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/src/main/resources/application.properties
   detection_source: bookmarker-api/src/main/resources/application.properties
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-07-08 00:41:11.000000000 Z
@@ -262,7 +262,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Operating Systems
   image_url: https://img.stackshare.io/service/6429/alpine_linux.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/docker-compose.yml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/docker-compose.yml
   detection_source: docker-compose.yml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:42:13.000000000 Z
@@ -275,7 +275,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series
   detection_source: Repo Metadata
 - name: axios
   description: Promise based HTTP client for the browser and node.js
@@ -287,7 +287,7 @@ tools:
   category: Libraries
   sub_category: Javascript Utilities & Libraries
   image_url: https://img.stackshare.io/no-img-open-source.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-02-13 04:18:47.000000000 Z
@@ -299,7 +299,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: K Siva Prasad Reddy
   last_updated_on: 2022-07-08 00:41:11.000000000 Z
@@ -311,7 +311,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -323,7 +323,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -335,7 +335,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -347,7 +347,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -359,7 +359,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -371,7 +371,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -384,7 +384,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -396,7 +396,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -409,7 +409,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -421,7 +421,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -434,7 +434,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -446,7 +446,7 @@ tools:
   category: Libraries
   sub_category: Maven Packages
   image_url: https://img.stackshare.io/package/maven/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-api/pom.xml
   detection_source: bookmarker-api/pom.xml
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 08:26:09.000000000 Z
@@ -460,7 +460,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17424/default_1cdcda15ebb7caed879f8340bc212b44c4ec9dac.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-02-13 04:20:33.000000000 Z
@@ -475,7 +475,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16549/default_d522554c6a41cb28d922d6d3ad32ad4afa0e3bb5.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-02-13 04:20:33.000000000 Z
@@ -489,7 +489,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-02-13 04:20:33.000000000 Z
@@ -503,7 +503,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15894/default_1d65e37e65b7f80761374f0202776043277d505d.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-02-13 04:20:33.000000000 Z
@@ -517,7 +517,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15946/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-02-13 04:20:33.000000000 Z
@@ -530,7 +530,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/package/npm/image.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-01-05 05:20:50.000000000 Z
@@ -544,7 +544,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/18413/default_867ef7396016341fd213fa568d6de11cc98fefff.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: Raja Kolli
   last_updated_on: 2023-11-25 13:29:52.000000000 Z
@@ -558,7 +558,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
-  detection_source_url: https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
+  detection_source_url: https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/bookmarker-ui-nextjs/yarn.lock
   detection_source: bookmarker-ui-nextjs/package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2024-02-13 04:20:33.000000000 Z

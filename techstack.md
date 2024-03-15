@@ -1,7 +1,7 @@
 <!--
 &lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
-rajadilipkolli/springboot-kubernetes-youtube-series is built on the following main stack:
+sivaprasadreddy/springboot-kubernetes-youtube-series is built on the following main stack:
 
 - [Java](https://www.java.com) – Languages
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
@@ -30,7 +30,7 @@ Full tech stack [here](/techstack.md)
 
 &lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
-rajadilipkolli/springboot-kubernetes-youtube-series is built on the following main stack:
+sivaprasadreddy/springboot-kubernetes-youtube-series is built on the following main stack:
 
 - <img width='25' height='25' src='https://img.stackshare.io/service/995/K85ZWV2F.png' alt='Java'/> [Java](https://www.java.com) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
@@ -60,7 +60,7 @@ Full tech stack [here](/techstack.md)
 <div align="center">
 
 # Tech Stack File
-![](https://img.stackshare.io/repo.svg "repo") [rajadilipkolli/springboot-kubernetes-youtube-series](https://github.com/rajadilipkolli/springboot-kubernetes-youtube-series)![](https://img.stackshare.io/public_badge.svg "public")
+![](https://img.stackshare.io/repo.svg "repo") [sivaprasadreddy/springboot-kubernetes-youtube-series](https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
 |44<br/>Tools used|02/19/24 <br/>Report generated|
 |------|------|

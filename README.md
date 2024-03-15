@@ -4,7 +4,7 @@ Code for "SpringBoot + Kubernetes Tutorial" YouTube Series https://www.youtube.c
 ## How to run?
 
 ```shell
-$ git clone https://github.com/dockertmt/springboot-kubernetes-youtube-series.git
+$ git clone https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series.git
 $ cd springboot-kubernetes-youtube-series
 $ ./run.sh start
 $ ./run.sh stop

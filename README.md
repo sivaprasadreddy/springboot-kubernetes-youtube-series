@@ -42,12 +42,12 @@ $ kubectl apply -f k8s/
 ```shell
 kubectl get pods
 kubectl get all
-kubectl run bookmarker-api --image=dockertmt/bookmarker-api --restart=Never --port=8080 --labels=env=dev,version=1.0
+kubectl run bookmarker-api --image=sivaprasadreddy/bookmarker-api --restart=Never --port=8080 --labels=env=dev,version=1.0
 kubectl get all
 kubectl describe pods bookmarker-api
 kubectl delete pods bookmarker-api
 
-kubectl run bookmarker-api --image=dockertmt/bookmarker-api --restart=Never --port=8080 --labels=env=dev,version=1.0 --dry-run=client -o yaml > pod.yaml
+kubectl run bookmarker-api --image=sivaprasadreddy/bookmarker-api --restart=Never --port=8080 --labels=env=dev,version=1.0 --dry-run=client -o yaml > pod.yaml
 kubectl apply -f pod.yaml
 kubectl logs bookmarker-api -f
 kubectl exec -it bookmarker-api -- /bin/sh
@@ -55,7 +55,7 @@ kubectl delete -f pod.yaml
 
 kubectl get ns
 kubectl create ns dev
-kubectl run bookmarker-api --image=dockertmt/bookmarker-api --restart=Never --port=8080 -n dev -o yaml --dry-run=client > pod.yaml
+kubectl run bookmarker-api --image=sivaprasadreddy/bookmarker-api --restart=Never --port=8080 -n dev -o yaml --dry-run=client > pod.yaml
 
 kubectl get pods -n dev
 kubectl delete ns dev
@@ -64,13 +64,13 @@ kubectl delete ns dev
 ### Deployments
 
 ```shell
-kubectl create deployment bookmarker-api-deploy --image=dockertmt/bookmarker-api
-kubectl create deployment bookmarker-api-deploy --image=dockertmt/bookmarker-api --dry-run=client -o yaml > deployment.yaml
+kubectl create deployment bookmarker-api-deploy --image=sivaprasadreddy/bookmarker-api
+kubectl create deployment bookmarker-api-deploy --image=sivaprasadreddy/bookmarker-api --dry-run=client -o yaml > deployment.yaml
 kubectl describe deployments.apps/bookmarker-api-deploy
 kubectl rollout history deployments bookmarker-api-deploy
 kubectl scale deployment bookmarker-api-deploy --replicas=3
 
-kubectl set image deployment bookmarker-api-deploy bookmarker-api=dockertmt/bookmarker-api:1.1
+kubectl set image deployment bookmarker-api-deploy bookmarker-api=sivaprasadreddy/bookmarker-api:1.1
 kubectl rollout status deployment bookmarker-api-deploy
 
 kubectl rollout undo deployment bookmarker-api-deploy --to-revision=1

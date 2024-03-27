@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/bookmarks")
@@ -23,8 +23,8 @@ public class BookmarkController {
     private final BookmarkService bookmarkService;
 
     @GetMapping
-    public BookmarksDTO getBookmarks(@RequestParam(name = "page", defaultValue = "1") Integer page,
-                                     @RequestParam(name = "query", defaultValue = "") String query) {
+    public BookmarksDTO getBookmarks(@RequestParam(defaultValue = "1") Integer page,
+                                     @RequestParam(defaultValue = "") String query) {
         if(query == null || query.trim().length() == 0) {
             return bookmarkService.getBookmarks(page);
         }

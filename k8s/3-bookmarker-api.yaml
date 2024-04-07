@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: bookmarker
-          image: dockertmt/bookmarker-api
+          image: sivaprasadreddy/bookmarker-api
           ports:
             - containerPort: 8080
           env:

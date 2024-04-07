@@ -1,0 +1,47 @@
+name: Build
+
+on:
+  push:
+    paths:
+      - "bookmarker-ui-nextjs/**"
+    branches: [ "main" ]
+  pull_request:
+    paths:
+      - "bookmarker-ui-nextjs/**"
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  build-bookmarker-ui:
+    name: Build bookmarker-ui
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./bookmarker-ui-nextjs
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'yarn'
+          cache-dependency-path: bookmarker-ui-nextjs/yarn.lock
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build
+
+      - name: Test
+        run: yarn test
+
+      - if: ${{ github.ref == 'refs/heads/main' }}
+        name: Build and Publish Docker Image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/bookmarker-ui-nextjs .
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/bookmarker-ui-nextjs

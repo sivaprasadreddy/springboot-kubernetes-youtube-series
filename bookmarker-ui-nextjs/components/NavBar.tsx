@@ -5,7 +5,7 @@ const NavBar = () => (
     <header>
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div className="container-fluid">
-                <Link href="/"><a className="navbar-brand">Bookmarker</a></Link>
+                <Link className="navbar-brand" href="/">Bookmarker</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@ const NavBar = () => (
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link href="/bookmarks/add"><a className="nav-link" >Add Bookmark</a></Link>
+                            <Link className="nav-link" href="/bookmarks/add">Add Bookmark</Link>
                         </li>
                     </ul>
                 </div>

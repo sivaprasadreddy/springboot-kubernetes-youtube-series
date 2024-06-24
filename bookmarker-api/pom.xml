@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.4</version>
+		<version>3.3.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sivalabs</groupId>
@@ -15,7 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
-		<jib-maven-plugin.version>3.4.2</jib-maven-plugin.version>
+		<jib-maven-plugin.version>3.4.3</jib-maven-plugin.version>
 		<problem-spring-web.version>0.29.1</problem-spring-web.version>
 		<dockerUserName>sivaprasadreddy</dockerUserName>
 		<dockerImageName>${dockerUserName}/${project.artifactId}</dockerImageName>
@@ -42,14 +42,13 @@
 			<artifactId>flyway-core</artifactId>
 		</dependency>
 		<dependency>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-database-postgresql</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.zalando</groupId>
 			<artifactId>problem-spring-web-starter</artifactId>
 			<version>${problem-spring-web.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

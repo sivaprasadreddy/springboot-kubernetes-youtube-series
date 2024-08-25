@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BookmarkerApiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(BookmarkerApiApplication.class, args);
 	}
 

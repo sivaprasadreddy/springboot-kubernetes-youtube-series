@@ -24,10 +24,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 18
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: 'yarn'
           cache-dependency-path: bookmarker-ui-nextjs/yarn.lock
       - name: Install dependencies

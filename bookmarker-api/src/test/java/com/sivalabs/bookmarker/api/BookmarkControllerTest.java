@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
@@ -19,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.everyItem;
+import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -75,6 +78,7 @@ class BookmarkControllerTest {
                             boolean hasNext, boolean hasPrevious) throws Exception {
         mvc.perform(get("/api/bookmarks?page="+pageNo))
                 .andExpect(status().isOk())
+                .andExpect(jsonPath("$.data[*].createdAt", everyItem(instanceOf(String.class))))
                 .andExpect(jsonPath("$.totalElements", CoreMatchers.equalTo(totalElements)))
                 .andExpect(jsonPath("$.totalPages", CoreMatchers.equalTo(totalPages)))
                 .andExpect(jsonPath("$.currentPage", CoreMatchers.equalTo(currentPage)))
@@ -100,19 +104,17 @@ class BookmarkControllerTest {
         .andExpect(status().isCreated())
         .andExpect(jsonPath("$.id", notNullValue()))
         .andExpect(jsonPath("$.title", is("SivaLabs Blog")))
-        .andExpect(jsonPath("$.url", is("https://sivalabs.in")));
+        .andExpect(jsonPath("$.url", is("https://sivalabs.in")))
+        .andExpect(jsonPath("$.createdAt", instanceOf(String.class)));
     }
 
-    @Test
-    void shouldFailToCreateBookmarkWhenUrlIsNotPresent() throws Exception {
+    @ParameterizedTest
+    @ValueSource(strings = {"{\"title\":\"SivaLabs Blog\"}", "{\"title\":\"SivaLabs Blog\",\"url\":\"\"}"})
+    void shouldFailToCreateBookmarkWhenUrlIsMissingOrEmpty(String request) throws Exception {
         this.mvc.perform(
                 post("/api/bookmarks")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("""
-                {
-                    "title": "SivaLabs Blog"
-                }
-                """)
+                        .content(request)
             )
             .andExpect(status().isBadRequest())
             .andExpect(header().string("Content-Type", is("application/problem+json")))

@@ -3,13 +3,14 @@ kind: Ingress
 metadata:
   name: bookmarker-api-ingress
   annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
 
     - http:
          paths:
-         - pathType: Prefix
+         - pathType: ImplementationSpecific
            path: /bookmarker-api(/|$)(.*)
            backend:
              service:

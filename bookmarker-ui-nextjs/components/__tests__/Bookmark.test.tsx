@@ -1,5 +1,6 @@
 // __tests__/Bookmark.test.tsx
 import React from 'react';
+declare var test: any; declare var expect: any;
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'
 

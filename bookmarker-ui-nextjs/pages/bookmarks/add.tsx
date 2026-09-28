@@ -1,8 +1,20 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetServerSideProps } from 'next'
 import React, {useState} from "react";
 import {saveBookmark} from "../../services/api";
 
-const AddBookmark: NextPage = () => {
+interface Props {
+  clientApiUrl: string | null;
+}
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+    return {
+        props: {
+            clientApiUrl: process.env.CLIENT_SIDE_API_BASE_URL || null
+        }
+    }
+}
+
+const AddBookmark: NextPage<Props> = ({ clientApiUrl }) => {
     const [title, setTitle] = useState("");
     const [url, setUrl] = useState("");
     const [message, setMessage] = useState<string|null>(null);
@@ -17,7 +29,7 @@ const AddBookmark: NextPage = () => {
             title,
             url
         }
-        const response = await saveBookmark(payload)
+        const response = await saveBookmark(payload, clientApiUrl || "")
         console.log("SaveBookmark response: ", response)
         setTitle("");
         setUrl("");

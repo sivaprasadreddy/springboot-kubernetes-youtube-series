@@ -4,7 +4,6 @@ import com.sivalabs.bookmarker.domain.BookmarkDTO;
 import com.sivalabs.bookmarker.domain.BookmarkService;
 import com.sivalabs.bookmarker.domain.BookmarksDTO;
 import com.sivalabs.bookmarker.domain.CreateBookmarkRequest;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,9 +17,12 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/bookmarks")
-@RequiredArgsConstructor
 public class BookmarkController {
     private final BookmarkService bookmarkService;
+
+    public BookmarkController(BookmarkService bookmarkService) {
+        this.bookmarkService = bookmarkService;
+    }
 
     @GetMapping
     public BookmarksDTO getBookmarks(@RequestParam(defaultValue = "1") Integer page,

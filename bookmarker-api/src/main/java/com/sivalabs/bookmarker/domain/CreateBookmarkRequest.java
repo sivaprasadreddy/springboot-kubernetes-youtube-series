@@ -1,15 +1,27 @@
 package com.sivalabs.bookmarker.domain;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import jakarta.validation.constraints.NotEmpty;
 
-@Setter
-@Getter
+
 public class CreateBookmarkRequest {
     @NotEmpty(message = "Title should not be empty")
     private String title;
     @NotEmpty(message = "Url should not be empty")
     private String url;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }

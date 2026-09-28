@@ -19,7 +19,6 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
             MethodArgumentNotValidException exception, HttpHeaders headers,
             HttpStatusCode status, WebRequest request) {
         ProblemDetail problem = ProblemDetail.forStatus(status);
-        // Preserve the validation response contract previously provided by Zalando.
         problem.setType(URI.create("https://zalando.github.io/problem/constraint-violation"));
         problem.setTitle("Constraint Violation");
         problem.setProperty("violations", exception.getBindingResult().getFieldErrors().stream()

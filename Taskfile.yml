@@ -24,7 +24,7 @@ tasks:
   build-api:
     desc: Build the Spring Boot API application
     cmds:
-      - cd bookmarker-api && ./mvnw clean package -DskipTests
+      - cd bookmarker-api && {{if eq OS "windows"}}mvnw{{else}}./mvnw{{end}} clean package -DskipTests
       
   docker-up:
     desc: Start the application with Docker Compose
@@ -50,14 +50,14 @@ tasks:
   k8s-build:
     desc: Build Docker images for Kubernetes deployment
     cmds:
-      - cd bookmarker-api && docker build -t sivaprasadreddy/bookmarker-api:0.0.1-SNAPSHOT .
-      - cd bookmarker-ui-nextjs && docker build -t sivaprasadreddy/bookmarker-ui:0.0.1-SNAPSHOT .
+      - cd bookmarker-api && docker build --load -t sivaprasadreddy/bookmarker-api:0.0.1-SNAPSHOT .
+      - cd bookmarker-ui-nextjs && docker build --load -t sivaprasadreddy/bookmarker-ui:0.0.1-SNAPSHOT .
       - echo "Docker images built successfully"
       
   k8s-create:
     desc: Create a Kind Kubernetes cluster for local development
     cmds:
-      - powershell -ExecutionPolicy Bypass -File kind/create-cluster.ps1
+      - '{{if eq OS "windows"}}powershell -ExecutionPolicy Bypass -File kind/create-cluster.ps1{{else}}./kind/create-cluster.sh{{end}}'
       - echo "Kind cluster created"
       
   k8s-deploy:
@@ -98,7 +98,7 @@ tasks:
   k8s-down:
     desc: Delete the Kind Kubernetes cluster
     cmds:
-      - powershell -ExecutionPolicy Bypass -Command "kind delete cluster --name bookmarker-cluster"
+      - '{{if eq OS "windows"}}powershell -ExecutionPolicy Bypass -Command "kind delete cluster --name bookmarker-cluster"{{else}}./kind/destroy-cluster.sh{{end}}'
       - echo "Kind cluster deleted"
     
   k8s-logs:

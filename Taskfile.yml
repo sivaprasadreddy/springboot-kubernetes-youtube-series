@@ -1,0 +1,134 @@
+version: '3'
+
+tasks:
+  default:
+    desc: Start the application with Docker Compose (default action)
+    cmds:
+      - task docker-up
+      - echo "Application started successfully!"
+      - 'echo "API available at: http://localhost:18080/api/bookmarks"'
+      - 'echo "UI available at: http://localhost:13000"'
+      
+  infra-up:
+    desc: Start only infrastructure services (PostgreSQL) without application
+    cmds:
+      - docker compose -f docker-compose.yml up -d
+      - echo "Infrastructure services started"
+      
+  infra-down:
+    desc: Stop only infrastructure services
+    cmds:
+      - docker compose -f docker-compose.yml stop
+      - docker compose -f docker-compose.yml rm -f
+      
+  build-api:
+    desc: Build the Spring Boot API application
+    cmds:
+      - cd bookmarker-api && {{if eq OS "windows"}}mvnw{{else}}./mvnw{{end}} clean package -DskipTests
+      
+  docker-up:
+    desc: Start the application with Docker Compose
+    cmds:
+      - task build-api
+      - docker compose -f docker-compose.yml -f docker-compose-app.yml up -d
+      - echo "Application started with Docker Compose"
+      - 'echo "- API available at: http://localhost:18080/api/bookmarks"'
+      - 'echo "- UI available at: http://localhost:13000"'
+      
+  docker-down:
+    desc: Stop and remove Docker Compose services
+    cmds:
+      - docker compose -f docker-compose.yml -f docker-compose-app.yml stop
+      - docker compose -f docker-compose.yml -f docker-compose-app.yml rm -f
+      - echo "Docker Compose services stopped"
+      
+  docker-logs:
+    desc: Show logs for Docker Compose services
+    cmds:
+      - docker compose -f docker-compose.yml -f docker-compose-app.yml logs -f
+      
+  k8s-build:
+    desc: Build Docker images for Kubernetes deployment
+    cmds:
+      - cd bookmarker-api && docker build --load -t sivaprasadreddy/bookmarker-api:0.0.1-SNAPSHOT .
+      - cd bookmarker-ui-nextjs && docker build --load -t sivaprasadreddy/bookmarker-ui:0.0.1-SNAPSHOT .
+      - echo "Docker images built successfully"
+      
+  k8s-create:
+    desc: Create a Kind Kubernetes cluster for local development
+    cmds:
+      - '{{if eq OS "windows"}}powershell -ExecutionPolicy Bypass -File kind/create-cluster.ps1{{else}}./kind/create-cluster.sh{{end}}'
+      - echo "Kind cluster created"
+      
+  k8s-deploy:
+    desc: Deploy applications to Kubernetes
+    cmds:
+      - echo "Deploying applications to Kubernetes..."
+      - kubectl apply -f k8s/1-config.yaml
+      - kubectl apply -f k8s/2-postgresdb.yaml
+      - echo "Waiting for PostgreSQL to be ready..."
+      - sleep 20
+      - kubectl apply -f k8s/3-bookmarker-api.yaml
+      - kubectl apply -f k8s/4-bookmarker-ui.yaml
+      - kubectl apply -f k8s/5-ingress-api.yaml
+      - kubectl apply -f k8s/6-ingress-ui.yaml
+      - echo "Applications deployed to Kubernetes successfully!"
+      - 'echo "- API using NodePort: http://localhost:30090/api/bookmarks"'
+      - 'echo "- UI using NodePort: http://localhost:30080/"'
+      - 'echo "- API using Ingress: http://localhost/bookmarker-api/api/bookmarks"'
+      - 'echo "- UI using Ingress: http://localhost/"'
+      
+  k8s-up:
+    desc: Start the full Kubernetes environment (build, create, deploy)
+    cmds:
+      - task k8s-build
+      - task k8s-create
+      - task k8s-deploy
+      
+  k8s-status:
+    desc: Show status of Kubernetes resources
+    cmds:
+      - echo "Kubernetes pod status:"
+      - kubectl get pods
+      - echo "Kubernetes service status:"
+      - kubectl get svc
+      - echo "Kubernetes ingress status:"
+      - kubectl get ingress
+
+  k8s-down:
+    desc: Delete the Kind Kubernetes cluster
+    cmds:
+      - '{{if eq OS "windows"}}powershell -ExecutionPolicy Bypass -Command "kind delete cluster --name bookmarker-cluster"{{else}}./kind/destroy-cluster.sh{{end}}'
+      - echo "Kind cluster deleted"
+    
+  k8s-logs:
+    desc: Show logs for Kubernetes pods
+    cmds:
+      - kubectl logs -l app=bookmarker-api-pod -f
+      
+  k8s-scale:
+    desc: Scale the bookmarker-api deployment to specified replicas
+    vars:
+      REPLICAS: '3'
+    cmds:
+      - kubectl scale deployment bookmarker-api-deployment --replicas={{.REPLICAS}}
+      - echo "Scaled bookmarker-api deployment to {{.REPLICAS}} replicas"
+      
+  k8s-rollout:
+    desc: Check the rollout status of the bookmarker-api deployment
+    cmds:
+      - kubectl rollout status deployment bookmarker-api-deployment
+      
+  all-up:
+    desc: Start both Docker Compose and Kubernetes environments
+    cmds:
+      - task docker-up
+      - task k8s-up
+      - echo "Both Docker Compose and Kubernetes environments started"
+      
+  all-down:
+    desc: Stop both Docker Compose and Kubernetes environments
+    cmds:
+      - task docker-down
+      - task k8s-down
+      - echo "Both Docker Compose and Kubernetes environments stopped"

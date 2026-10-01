@@ -29,11 +29,12 @@ spec:
     spec:
       containers:
         - name: bookmarker-ui
-          image: sivaprasadreddy/bookmarker-ui-nextjs
+          image: sivaprasadreddy/bookmarker-ui:0.0.1-SNAPSHOT
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
           env:
             - name: CLIENT_SIDE_API_BASE_URL
-              value: http://localhost:18080
+              value: http://localhost:30090
             - name: SERVER_SIDE_API_BASE_URL
               value: http://bookmarker-api-svc:8080

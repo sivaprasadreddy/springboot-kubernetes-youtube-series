@@ -1,15 +1,15 @@
 # the first stage of our build will extract the layers
-FROM eclipse-temurin:21.0.5_11-jre as builder
+FROM eclipse-temurin:25.0.4_7-jre as builder
 WORKDIR application
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} application.jar
-RUN java -Djarmode=layertools -jar application.jar extract
+RUN java -Djarmode=tools -jar application.jar extract --layers --destination extracted
 
 # the second stage of our build will copy the extracted layers
-FROM eclipse-temurin:21.0.5_11-jre
+FROM eclipse-temurin:25.0.4_7-jre
 WORKDIR application
-COPY --from=builder application/dependencies/ ./
-COPY --from=builder application/spring-boot-loader/ ./
-COPY --from=builder application/snapshot-dependencies/ ./
-COPY --from=builder application/application/ ./
+COPY --from=builder application/extracted/dependencies/ ./
+COPY --from=builder application/extracted/spring-boot-loader/ ./
+COPY --from=builder application/extracted/snapshot-dependencies/ ./
+COPY --from=builder application/extracted/application/ ./
 ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]

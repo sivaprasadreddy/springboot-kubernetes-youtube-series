@@ -34,7 +34,7 @@ $ cd ../
 $ kubectl apply -f k8s/
 ```
 
-* Access API using NodePort http://localhost:18080/api/bookmarks
+* Access API using NodePort http://localhost:30090/api/bookmarks
 * Access UI using NodePort http://localhost:30080/
 * Access API using Ingress http://localhost/bookmarker-api/api/bookmarks
 * Access UI using Ingress http://localhost/

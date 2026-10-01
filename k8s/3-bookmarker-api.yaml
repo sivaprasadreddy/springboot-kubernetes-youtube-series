@@ -29,7 +29,8 @@ spec:
     spec:
       containers:
         - name: bookmarker
-          image: sivaprasadreddy/bookmarker-api
+          image: sivaprasadreddy/bookmarker-api:0.0.1-SNAPSHOT
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
           env:
